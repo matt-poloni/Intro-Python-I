@@ -9,14 +9,11 @@ def is_prime(num):
             return False
         else:
             factors[:] = remove_mults(factors, n)
-    else:
-        return True
+    return True
 
 def sieve(lim):
     primes = [*range(2, lim)]
     for n in primes:
         if not is_prime(n):
             primes[:] = remove_mults(primes, n)
-        else:
-            continue
     return primes
